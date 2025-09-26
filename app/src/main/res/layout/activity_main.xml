@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    >
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="bottom|center_horizontal"
+
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Point camera to Aadhaar QR or printed number"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/btnCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copy"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:visibility="gone"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/scanArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/scanBox"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:background="@drawable/scan_box_border"
+                android:layout_gravity="center" />
+
+            <View
+                android:id="@+id/scanLine"
+                android:layout_width="240dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:background="#33CC00" />
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>
