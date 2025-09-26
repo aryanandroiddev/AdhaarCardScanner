@@ -56,7 +56,7 @@ Setup & Installation
 
 Clone the repository:
 
-git clone https://github.com/yourusername/AdhaarScanner.git
+git clone https://github.com/aryanandroiddev/AdhaarCardScanner.git
 cd AdhaarScanner
 
 
